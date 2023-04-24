@@ -6,14 +6,22 @@ import './Button'
 export default {
   title: 'Example/Button',
   tags: ['autodocs'],
-  render: (_args: any) => html`<swc-button></swc-button>`,
-  argTypes: {}
+  render: (args: any) => html`
+    <swc-button
+      color=${args.color}
+    >${args.label}</swc-button>
+  `,
+  argTypes: {
+    color: {
+      control: 'text',
+      description: 'Specifies the color of the component, it can be those defined in the color palette, or in hexadecimal, rgb, rgba, hls format.'
+    }
+  }
 }
 
 // More on writing stories with args: https://storybook.js.org/docs/web-components/writing-stories/args
 export const Primary = {
   args: {
-    primary: true,
-    label: 'Button'
+    label: 'Click me!'
   }
 }

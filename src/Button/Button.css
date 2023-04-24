@@ -1,5 +1,35 @@
-button {
+:host {
+  /* Colors */
+  --swc-button-bg-color: var(--deep-purple-accent-3);
+  --swc-button-color: var(--white);
+
+  /* Borders */
+  --swc-button-border-radius: 5px;
+
+  /* Paddings */
+  --swc-button-padding: 10px 20px;
+
+  /* Fonts */
+  --swc-button-font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  --swc-button-font-size: 14px;
+
+  /* Hovers */
+  --swc-button-hover-bg-color: rgba(255, 255, 255, 0.1);
+}
+
+.button {
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: var(--swc-button-padding);
+  border-radius: var(--swc-button-border-radius);
+  font-family: var(--swc-button-font-family);
+  font-size: var(--swc-button-font-size);
+  background-color: var(--swc-button-bg-color);
+  color: var(--swc-button-color);
+  transition: .2s all;
+  cursor: pointer;
+}
+
+.button:hover {
+  /* background-color: var(--swc-button-hover-bg-color); */
+  opacity: .8;
 }
