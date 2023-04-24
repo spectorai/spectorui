@@ -1,9 +1,10 @@
 {
-  "name": "spectorui",
+  "name": "@spectorai/ui",
   "version": "0.0.0",
-  "description": "",
+  "description": "Beautiful universal components for the web.",
   "main": "",
   "scripts": {
+    "eslint": "eslint \"src/**/*.ts\" --fix",
     "sb:dev": "storybook dev -p 6006",
     "sb:build": "storybook build -o dist",
     "sb:preview": "vite preview --config dist"
@@ -12,29 +13,37 @@
     "type": "git",
     "url": "git+https://github.com/spectorai/spectorui.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "spector ai",
+    "spector ui",
+    "web components"
+  ],
+  "author": {
+    "name": "Ivan Zaldivar",
+    "url": "https://github.com/thebug404/",
+    "email": "ivanzaldivar16@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/spectorai/spectorui/issues"
   },
   "homepage": "https://github.com/spectorai/spectorui#readme",
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.6",
-    "@storybook/addon-links": "^7.0.6",
-    "@storybook/blocks": "^7.0.6",
-    "@storybook/web-components": "^7.0.6",
-    "@storybook/web-components-vite": "^7.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
-    "eslint": "^8.39.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.7.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "lit": "^2.7.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "storybook": "^7.0.6"
+    "@storybook/addon-essentials": "7.0.6",
+    "@storybook/addon-links": "7.0.6",
+    "@storybook/blocks": "7.0.6",
+    "@storybook/web-components": "7.0.6",
+    "@storybook/web-components-vite": "7.0.6",
+    "@typescript-eslint/eslint-plugin": "5.59.0",
+    "@typescript-eslint/parser": "5.59.0",
+    "eslint": "8.39.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "15.7.0",
+    "eslint-plugin-promise": "6.1.1",
+    "lit": "2.7.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "7.0.6"
   }
 }
