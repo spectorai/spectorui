@@ -6,14 +6,14 @@ import './Button'
 export default {
   title: 'Example/Button',
   tags: ['autodocs'],
-  render: (_args) => html`<swc-button></swc-button>`,
-  argTypes: {},
-};
+  render: (_args: any) => html`<swc-button></swc-button>`,
+  argTypes: {}
+}
 
 // More on writing stories with args: https://storybook.js.org/docs/web-components/writing-stories/args
 export const Primary = {
   args: {
     primary: true,
-    label: 'Button',
+    label: 'Button'
   }
 }
