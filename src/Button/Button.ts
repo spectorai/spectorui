@@ -14,9 +14,13 @@ declare global {
   }
 }
 
+export type Appearance = 'raised' | 'outlined'
+
 @customElement('swc-button')
 export class Button extends LitElement {
   static styles?: CSSResultGroup | undefined = css`${unsafeCSS(styles)}`
+
+  @property({ type: String, reflect: true }) appearance: Appearance = 'raised'
 
   @property({ type: String, reflect: true }) color: string = 'deep-purple-accent-2'
 
@@ -29,7 +33,10 @@ export class Button extends LitElement {
   protected render (): unknown {
     return html`
       <button class="button" type="button">
-        <slot></slot>
+        <span class="button__hover"></span>
+        <div class="button__content">
+          <slot></slot>
+        </div>
       </button>
     `
   }
