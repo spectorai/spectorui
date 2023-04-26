@@ -14,7 +14,7 @@ declare global {
   }
 }
 
-export type Appearance = 'raised' | 'outlined'
+export type Appearance = 'raised' | 'outlined' | 'standard'
 
 @customElement('swc-button')
 export class Button extends LitElement {

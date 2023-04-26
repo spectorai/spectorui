@@ -12,18 +12,20 @@
   /* Fonts */
   --swc-button-font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   --swc-button-font-size: 14px;
-
-  /* Hovers */
-  --swc-button-hover-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 :host([appearance="outlined"]) .button {
-  background-color: transparent;
-  color: var(--swc-button-bg-color);
   border: 2px solid var(--swc-button-bg-color);
 }
 
-:host([appearance="outlined"]) .button:hover .button__hover::before {
+:host([appearance="outlined"]) .button,
+:host([appearance="standard"]) .button {
+  background-color: transparent;
+  color: var(--swc-button-bg-color);
+}
+
+:host([appearance="outlined"]) .button:hover .button__hover::before,
+:host([appearance="standard"]) .button:hover .button__hover::before {
   background-color: var(--swc-button-bg-color);
   opacity: .08;
 }
@@ -61,5 +63,5 @@
 
 .button:hover .button__hover::before {
   background-color: rgba(255, 255, 255, 1);
-  opacity: .1;
+  opacity: .2;
 }

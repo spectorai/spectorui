@@ -15,8 +15,8 @@ export default {
   argTypes: {
     appearance: {
       control: 'inline-radio',
-      options: ['raised', 'outlined'],
-      description: 'Specifies the visual style of the button. Available values are: `raised` & `outlined`'
+      options: ['raised', 'outlined', 'standard'],
+      description: 'Specifies the visual style of the button. Available values are: `raised`, `outlined` & `standard`'
     },
     color: {
       control: 'text',
@@ -36,5 +36,12 @@ export const Outlined = {
   args: {
     appearance: 'outlined',
     label: 'Outlined button!'
+  }
+}
+
+export const Standard = {
+  args: {
+    appearance: 'standard',
+    label: 'Standard button!'
   }
 }
