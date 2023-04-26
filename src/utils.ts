@@ -9,6 +9,10 @@ export function getColor (name: ColorNameMap): string {
   return colorsMap[name]
 }
 
+/**
+ * Creates a ripple effect on a button element.
+ * @param {PointerEvent} event - The pointer event that triggers the ripple effect.
+ */
 export function createRipple (event: PointerEvent) {
   const button = event.currentTarget as HTMLButtonElement
 
