@@ -1,6 +1,6 @@
 :host {
   /* Colors */
-  --swc-button-bg-color: var(--deep-purple-accent-3);
+  --swc-button-bg-color: var(--deep-purple-accent-2);
   --swc-button-color: var(--white);
 
   /* Borders */
@@ -28,6 +28,12 @@
 :host([appearance="standard"]) .button:hover .button__hover::before {
   background-color: var(--swc-button-bg-color);
   opacity: .08;
+}
+
+:host([appearance="outlined"]) .ripple,
+:host([appearance="standard"]) .ripple {
+  background-color: var(--swc-button-bg-color);
+  opacity: .35;
 }
 
 .button {
@@ -64,4 +70,20 @@
 .button:hover .button__hover::before {
   background-color: rgba(255, 255, 255, 1);
   opacity: .2;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }

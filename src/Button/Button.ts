@@ -5,7 +5,7 @@ import '../styles.css'
 import styles from './Button.css?inline'
 
 import { ColorNameMap } from '../declarations'
-import { getColor } from '../utils'
+import { createRipple, getColor } from '../utils'
 
 declare global {
   // eslint-disable-next-line no-unused-vars
@@ -32,8 +32,15 @@ export class Button extends LitElement {
 
   protected render (): unknown {
     return html`
-      <button class="button" type="button">
+      <button
+        type="button"
+        class="button"
+        @click=${(e: PointerEvent) => createRipple(e)}
+      >
         <span class="button__hover"></span>
+
+        <span class="ripple"></span>
+
         <div class="button__content">
           <slot></slot>
         </div>
