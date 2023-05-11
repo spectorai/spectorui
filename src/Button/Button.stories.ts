@@ -21,6 +21,10 @@ export default {
     color: {
       control: 'text',
       description: 'Specifies the color of the component, it can be those defined in the color palette, or in hexadecimal, rgb, rgba, hls format.'
+    },
+    label: {
+      control: 'text',
+      description: 'This property is not available outside of the storybook.'
     }
   }
 }
